@@ -1,0 +1,10 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "docker-compose.*.*": "dockerfile",
+        ".dockerfile.*": "dockerfile",
+        "*.json": "jsonc",
+        ".releaserc": "jsonc",
+    }
+}

@@ -1,0 +1,6 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+* @J-Liciaga/nx-next-starter
+
+/tools/code-scanning/ @J-Liciaga/nx-next-starter

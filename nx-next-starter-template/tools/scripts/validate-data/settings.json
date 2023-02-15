@@ -1,0 +1,26 @@
+{
+  "folders": [
+    "../../ci",
+    "../../automation",
+    "../../deployments",
+    "../../code-scanning",
+  ],
+  "allowed_categories": [
+    {
+      "path": "../../ci",
+      "categories":  ["Continuous integration"]
+    },
+    {
+      "path": "../../automation",
+      "categories": ["Automation"]
+    },
+    {       
+      "path": "../../deployments",
+      "categories": ["Deployment"]
+    },
+    { 
+      "path": "../../code-scanning",
+      "categories": ["Code Scanning", "Dependency review"]
+    }
+  ]
+}
