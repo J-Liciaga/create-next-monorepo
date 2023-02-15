@@ -2,17 +2,16 @@
 
 const { spawn } = require("child_process");
 
-const args = process.argv.slice(2);
-const child = spawn("./target/release/create-next-monorepo", args);
+const binary = spawn("./target/release/create-next-monorepo", process.argv.slice(2));
 
-child.stdout.on("data", (data) => {
-    console.log(data.toString().trim());
+binary.stdout.on("data", (data) => {
+    console.log(`stdout: ${data}`);
 });
 
-child.stderr.on("data", (data) => {
-    console.error(data.toString().trim());
+binary.stderr.on("data", (data) => {
+    console.error(`stderr: ${data}`);
 });
 
-child.on("close", (code) => {
-    process.exit(code);
+binary.on("close", (code) => {
+    console.log(`child process exited with code ${code}`);
 });

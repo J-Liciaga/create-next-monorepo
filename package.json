@@ -1,7 +1,7 @@
 {
   "name": "create-next-monorepo",
   "version": "1.0.0",
-  "description": "supercharged nx nextjs based mono-repository",
+  "description": "CLI for creating a NX mono-repository based on the nx-next-starter project",
   "main": "index.js",
   "scripts": {
     "postinstall": "husky install",
@@ -29,6 +29,6 @@
     "husky": "^8.0.3"
   },
   "bin": {
-    "cli": "target/release/create-next-monorepo"
+    "cli": "./index.js"
   }
 }
