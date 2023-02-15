@@ -1,0 +1,30 @@
+{
+  "name": "create-next-monorepo",
+  "version": "1.0.0",
+  "description": "supercharged nx nextjs based mono-repository",
+  "scripts": {
+    "postinstall": "husky install",
+    "semantic-release": "semantic-relase --branches main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Liciaga/create-next-monorepo.git"
+  },
+  "author": "Josiah Liciaga <josiah.liciagasilva@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J-Liciaga/create-next-monorepo/issues"
+  },
+  "homepage": "https://github.com/J-Liciaga/create-next-monorepo#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "conventional-commit-types": "^3.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3"
+  }
+}
