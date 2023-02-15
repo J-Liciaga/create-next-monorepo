@@ -1,6 +1,7 @@
 use std::fs;
 use std::path::Path;
 use std::error::Error;
+use std::process::Command;
 
 pub struct Config {
     pub project_name: String,
@@ -19,6 +20,21 @@ impl Config {
         Ok(Config { project_name })
     }
 }
+
+fn clone_starter_project() {
+    let output = Command::new("git")
+        .arg("clone")
+        .arg("https://github.com/J-Liciaga/nx-next-starter.git")
+        .output()
+        .expect("Failed to execute process");
+
+    if output.status.success() {
+        println!("Git clone successful!");
+    } else {
+        let error_message = String::from_utf8_lossy(&output.stderr);
+        println!("Git clone failed: {}", error_message);
+    }
+} 
 
 fn copy_dir(
     from_dir: &Path,
@@ -43,9 +59,11 @@ fn copy_dir(
 pub fn generate_project(
     project_name: &str,
 ) -> Result<(), Box<dyn Error>> {
+    clone_starter_project();
+
     let source_dir = std::env::current_dir().unwrap();
     let unwrapped_source_path = source_dir.to_str().unwrap();
-    let formatted_source_path = format!("{}{}", unwrapped_source_path, "/nx-next-starter-template");
+    let formatted_source_path = format!("{}{}", unwrapped_source_path, "/nx-next-starter");
     let source_path = Path::new(&formatted_source_path);
 
     let from_dir = Path::new(source_path);
