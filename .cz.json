@@ -1,0 +1,8 @@
+{
+    "path": "cz-conventional-changelog",
+    "commitizen": {
+        "name": "cz_conventional_commits",
+        "version": "0.0.1",
+        "tag_format": "$version"
+    }
+}
