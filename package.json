@@ -1,15 +1,13 @@
 {
   "name": "create-next-monorepo",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "CLI for creating a NX mono-repository based on the nx-next-starter project",
   "main": "index.js",
   "scripts": {
-    "postinstall": "husky install",
-    "test-run": "cargo run test-project",
+    "test-run": "node index.js test-project",
     "build": "cargo build --release",
     "publish": " npm publish --access public",
-    "clean": "rimraf nx-next-starter test-project target",
-    "semantic-release": "semantic-relase --branches main"
+    "clean": "rimraf nx-next-starter node_modules test-project target"
   },
   "repository": {
     "type": "git",
@@ -33,16 +31,12 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.3",
     "@commitlint/config-conventional": "^17.4.3",
-    "@semantic-release/changelog": "^6.0.2",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
     "conventional-commit-types": "^3.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "rimraf": "^4.1.2"
   },
   "bin": {
-    "cli": "./index.js"
+    "cli": "cargo build --release && ./index.js"
   }
 }
