@@ -77,8 +77,10 @@ jobs:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Authenticate with NPM registry
-        run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+      - name: Log in to NPM registry
+        run: npm login
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Publish to NPM
         shell: bash
@@ -113,7 +115,7 @@ jobs:
           cp "../target/${{ matrix.build.TARGET }}/release/${bin}" "${node_pkg}/bin"
           # publish the package
           cd "${node_pkg}"
-          npm publish --access public --//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+          npm publish --access public --//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
