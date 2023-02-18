@@ -1,6 +1,5 @@
 use std::env;
 use std::process;
-
 use create_next_monorepo::Config;
 
 fn main() {
@@ -13,7 +12,7 @@ fn main() {
 
     println!("Generating project {}", config.project_name);
 
-    if let Err(e) = create_next_monorepo::generate_project(&config.project_name) {
+    if let Err(e) = create_next_monorepo::generate_starter(&config.project_name) {
         eprintln!("Application error: {}", e);
         process::exit(1);
     }

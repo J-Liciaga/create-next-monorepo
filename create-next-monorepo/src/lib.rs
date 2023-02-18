@@ -21,7 +21,7 @@ impl Config {
     }
 }
 
-fn clone_starter_project() {
+fn clone_repo() {
     let output = Command::new("git")
         .arg("clone")
         .arg("https://github.com/J-Liciaga/nx-next-starter.git")
@@ -56,10 +56,10 @@ fn copy_dir(
     Ok(())
 }
 
-pub fn generate_project(
+pub fn generate_starter(
     project_name: &str,
 ) -> Result<(), Box<dyn Error>> {
-    clone_starter_project();
+    clone_repo();
 
     let source_dir = std::env::current_dir().unwrap();
     let unwrapped_source_path = source_dir.to_str().unwrap();
