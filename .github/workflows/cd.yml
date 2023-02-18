@@ -77,11 +77,6 @@ jobs:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Log in to NPM registry
-        run: npm login
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
       - name: Publish to NPM
         shell: bash
         run: |
