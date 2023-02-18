@@ -1,5 +1,5 @@
 [package]
 name = "create-next-monorepo"
-version = "0.0.3"
+version = "0.1.0"
 edition = "2021"
 repository = "https://github.com/J-Liciaga/create-next-monorepo"

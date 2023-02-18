@@ -4,4 +4,4 @@ version = 3
 
 [[package]]
 name = "create-next-monorepo"
-version = "0.0.3"
+version = "0.1.0"
