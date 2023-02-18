@@ -77,6 +77,9 @@ jobs:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
 
+      - name: Log in to NPM registry
+        run: echo "hello world!"
+
       - name: Publish to NPM
         shell: bash
         run: |
