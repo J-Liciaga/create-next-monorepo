@@ -1,4 +1,4 @@
-/target
-/node_modules
-/nx-next-starter
-/test-project
+node_modules/
+target/
+pkg/
+nx-next-starter/
