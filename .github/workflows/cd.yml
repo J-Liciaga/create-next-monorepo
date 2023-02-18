@@ -77,6 +77,9 @@ jobs:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
 
+      - name: Authenticate with NPM registry
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+
       - name: Publish to NPM
         shell: bash
         run: |
