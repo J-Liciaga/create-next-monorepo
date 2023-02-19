@@ -1,0 +1,37 @@
+{
+  "name": "create-next-monorepo",
+  "description": "cli for creating an nx momo-repository based on the nx-next-starter template",
+  "version": "0.1.0",
+  "private": false,
+  "bin": {
+    "create-next-monorepo": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Liciaga/create-next-monorepo.git"
+  },
+  "keywords": [
+    "nx-next-starter",
+    "nx",
+    "typescript",
+    "react",
+    "next.js",
+    "react-native"
+  ],
+  "author": "Josiah Liciaga",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/J-Liciaga/create-next-monorepo/issues"
+  },
+  "homepage": "https://github.com/J-Liciaga/create-next-monorepo#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "ncp": "^2.0.0",
+    "util": "^0.12.5",
+    "yargs": "^17.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
